@@ -1,5 +1,6 @@
 import sys
 import time
+from demo_grid import *
 data=[['#','#','#','#','#','#','#','#'],['#','-','-','-','-','-','-','#'],['#','-','#','#','#','-','-','#'],['#','-','#','*','#','-','-','#'],['#','-','-','-','#','-','-','#'],['#','-','#','#','#','-','-','#'],['#','p','-','-','-','-','-','#'],['#','#','#','#','#','#','#','#']]
 length=8
 class Node:
@@ -84,4 +85,6 @@ while cur.parent !=   None:
     path.append(list([cur.x,cur.y]))
     cur=cur.parent
 path.reverse()
+#DataPrint(data)
 print(path)
+pacman_viewer(path=path,data=data)
